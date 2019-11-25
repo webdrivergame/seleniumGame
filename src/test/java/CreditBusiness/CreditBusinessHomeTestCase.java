@@ -23,7 +23,7 @@ public class CreditBusinessHomeTestCase {
     public void loginAdmin() throws InterruptedException {
         driverUtil.loginBefore(Url);
         driverUtil.adminLogin(username,password);
-        driverUtil.findElementByXpathAndClick(login);
+        driverUtil.xpathAndClick(login);
         Thread.sleep(4000);
     }
 
@@ -49,7 +49,7 @@ public class CreditBusinessHomeTestCase {
     public void accountBalance() throws InterruptedException {
         String getAccountBalance = driverUtil.getTextByXpath(accountBalance);
         System.out.println("首页账户余额："+getAccountBalance);
-        driverUtil.findElementByXpathAndClick(clickAccountBalance);
+        driverUtil.xpathAndClick(clickAccountBalance);
         Thread.sleep(2000);
         String getAccountBalanceTotal = driverUtil.getTextByXpath(accountBalanceTotal);
         String getChangeAfterAccountBalance = driverUtil.getTextByXpath(changeAfterAccountBalance);
@@ -82,18 +82,18 @@ public class CreditBusinessHomeTestCase {
     @Test(priority = 2)
     public void serviceIncomeToday() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"首页");
-        driverUtil.findElementByXpathAndClick(home);
+        driverUtil.xpathAndClick(home);
         Thread.sleep(3000);
         String getServiceIncomeToday = driverUtil.getTextByXpath(serviceIncomeToday);
         System.out.println("首页今日服务费收入："+getServiceIncomeToday);
         if (! getServiceIncomeToday.equals("0.000")) {
             driverUtil.findElementByXpathAndClearSendkeys(inputText, "我的服务费账户变动");
-            driverUtil.findElementByXpathAndClick(myServiceAccount);
+            driverUtil.xpathAndClick(myServiceAccount);
             Thread.sleep(2000);
-            driverUtil.findElementByXpathAndClick(serviceDetail);
+            driverUtil.xpathAndClick(serviceDetail);
             Thread.sleep(2000);
-            driverUtil.findElementByXpathAndClick(clickDate);
-            driverUtil.findElementByXpathAndClick(selectToday);
+            driverUtil.xpathAndClick(clickDate);
+            driverUtil.xpathAndClick(selectToday);
             String getServiceToday = driverUtil.getTextByXpath(serviceToday);
             System.out.println("今日服务费：" + getServiceToday);
             Assertion.setFlag(true);
@@ -125,11 +125,11 @@ public class CreditBusinessHomeTestCase {
     @Test(priority = 4)
     public void agentNumber() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"首页");
-        driverUtil.findElementByXpathAndClick(home);
+        driverUtil.xpathAndClick(home);
         Thread.sleep(3000);
         String getAgentNumber = driverUtil.getTextByXpath(agentNumber);
         System.out.println("首页代理人数："+getAgentNumber);
-        driverUtil.findElementByXpathAndClick(clickAgentNumber);
+        driverUtil.xpathAndClick(clickAgentNumber);
         Thread.sleep(2000);
         String getAgentNumber2 = driverUtil.getTextByXpath(agentNumber2);
         String a1 = getAgentNumber2.substring(2,getAgentNumber2.indexOf(" 条"));

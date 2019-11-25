@@ -49,12 +49,12 @@ public class ModeComplexStatisticsCreditTestCase {
     @Test(priority = 1)
     public void registeredNumber() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"信用模式综合统计");
-        driverUtil.findElementByXpathAndClick(clickCreditModelComplexStatistics);
+        driverUtil.xpathAndClick(clickCreditModelComplexStatistics);
         Thread.sleep(3000);
         String getRegisteredNumber = driverUtil.getTextByXpath(registeredNumber);
         System.out.println("信用模式综合统计今日注册人数："+getRegisteredNumber);
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"信用留存统计");
-        driverUtil.findElementByXpathAndClick(creditRetainedStatistics);
+        driverUtil.xpathAndClick(creditRetainedStatistics);
         Thread.sleep(2000);
         String getDateToday = driverUtil.getTextByXpath(dateToday);
         System.out.println("获取日期："+getDateToday);//获取信用留存日期去掉-并转换int类型
@@ -93,12 +93,12 @@ public class ModeComplexStatisticsCreditTestCase {
     @Test(priority = 2)
     public void loginNumber() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"信用模式综合统计");
-        driverUtil.findElementByXpathAndClick(clickCreditModelComplexStatistics);
+        driverUtil.xpathAndClick(clickCreditModelComplexStatistics);
         Thread.sleep(3000);
         String getLoginNumber = driverUtil.getTextByXpath(loginNumber);
         System.out.println("信用综合统计登录人数："+getLoginNumber);
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"信用留存统计");
-        driverUtil.findElementByXpathAndClick(creditRetainedStatistics);
+        driverUtil.xpathAndClick(creditRetainedStatistics);
         Thread.sleep(2000);
         String getDateToday = driverUtil.getTextByXpath(dateToday);
         System.out.println("获取日期："+getDateToday);
@@ -139,12 +139,12 @@ public class ModeComplexStatisticsCreditTestCase {
     @Test(priority = 3)
     public void Bet() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"信用模式综合统计");
-        driverUtil.findElementByXpathAndClick(clickCreditModelComplexStatistics);
+        driverUtil.xpathAndClick(clickCreditModelComplexStatistics);
         Thread.sleep(3000);
         String getBet = driverUtil.getTextByXpath(Bet);
         System.out.println("信用模式综合统计投注额："+getBet);
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"信用模式游戏输赢统计");
-        driverUtil.findElementByXpathAndClick(clickCreditGameWinOrLoseStatistics);
+        driverUtil.xpathAndClick(clickCreditGameWinOrLoseStatistics);
         Thread.sleep(2000);
         String getCreditModelComplexStatisticsBex = driverUtil.getTextByXpath(creditModelComplexStatisticsBex);
         System.out.println("信用模式游戏输赢投注额："+getCreditModelComplexStatisticsBex);
@@ -172,12 +172,12 @@ public class ModeComplexStatisticsCreditTestCase {
     @Test(priority = 4)
     public void serviceMoney() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"信用模式综合统计");
-        driverUtil.findElementByXpathAndClick(clickCreditModelComplexStatistics);
+        driverUtil.xpathAndClick(clickCreditModelComplexStatistics);
         Thread.sleep(3000);
         String getServiceMoney = driverUtil.getTextByXpath(serviceMoney);
         System.out.println("信用模式综合统计今日服务费："+getServiceMoney);
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"下级服务费统计");
-        driverUtil.findElementByXpathAndClick(clickLowerServiceStatistics);
+        driverUtil.xpathAndClick(clickLowerServiceStatistics);
         Thread.sleep(2000);
         String getServiceToday = driverUtil.getTextByXpath(serviceToday2);
         System.out.println("下级服务费统计今日服务费："+getServiceToday);

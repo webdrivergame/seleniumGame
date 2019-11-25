@@ -66,22 +66,22 @@ public class LowerCommissionSettlementRecord {
     @Test(priority = 1)
     public void waitWithdrawCommission() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"现金推广代理");
-        driverUtil.findElementByXpathAndClick(clickCashAgent);
+        driverUtil.xpathAndClick(clickCashAgent);
         Thread.sleep(2000);
         driverUtil.findElementByXpathAndClearSendkeys(inputBusiness,"qaxjtg01");
-        driverUtil.findElementByXpathAndClick(Inquire);
+        driverUtil.xpathAndClick(Inquire);
         Thread.sleep(2000);
-        driverUtil.findElementByXpathAndClick(clickCashBusiness);
+        driverUtil.xpathAndClick(clickCashBusiness);
         Thread.sleep(2000);
         String getWaitWithdrawCommission = driverUtil.getTextByXpath(waitWithdrawCommission);
         System.out.println("现金商户待提现佣金："+getWaitWithdrawCommission);
-        driverUtil.findElementByXpathAndClick(settlement);
+        driverUtil.xpathAndClick(settlement);
         Thread.sleep(1000);
         driverUtil.findElementByXpathAndClearSendkeys(settlementInput,"100");
-        driverUtil.findElementByXpathAndClick(settlementSure);
+        driverUtil.xpathAndClick(settlementSure);
         Thread.sleep(2000);
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"下级佣金结算记录");
-        driverUtil.findElementByXpathAndClick(lowerCommissionSettlementRecord);
+        driverUtil.xpathAndClick(lowerCommissionSettlementRecord);
         Thread.sleep(2000);
         String getWithdrawBeforeMoney = driverUtil.getTextByXpath(withdrawBeforeMoney);
         String getWithdrawMoney = driverUtil.getTextByXpath(withdrawMoney);

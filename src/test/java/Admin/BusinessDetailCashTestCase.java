@@ -49,13 +49,13 @@ public class BusinessDetailCashTestCase {
     @Test(priority = 1)
     public void BusinessPlayerTotal() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"现金推广代理");
-        driverUtil.findElementByXpathAndClick(clickCashAgent);
+        driverUtil.xpathAndClick(clickCashAgent);
         Thread.sleep(2000);
         String getBusinessPlayerTotal = driverUtil.getTextByXpath(businessPlayerTotal);
         BigDecimal a1 = StringToNumber.toBigDecimal(getBusinessPlayerTotal);
         BigDecimal a2 = a1.add(new BigDecimal(5));
         System.out.println("商户推广玩家总数(加上测试玩家)："+a2);
-        driverUtil.findElementByXpathAndClick(businessPlayerTotal);
+        driverUtil.xpathAndClick(businessPlayerTotal);
         Thread.sleep(4000);
         String getPlayerAdminNumber = driverUtil.getTextByXpath(PlayerAdminNumber);
         String b1 = getPlayerAdminNumber.substring(2,getPlayerAdminNumber.indexOf(" 条"));
@@ -86,11 +86,11 @@ public class BusinessDetailCashTestCase {
     @Test(priority = 2)
     public void ImmediateLowerNumber() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"现金推广代理");
-        driverUtil.findElementByXpathAndClick(clickCashAgent);
+        driverUtil.xpathAndClick(clickCashAgent);
         Thread.sleep(2000);
         String getImmediateLowerNumber = driverUtil.getTextByXpath(ImmediateLowerNumber);
         System.out.println("直属下级人数："+getImmediateLowerNumber);
-        driverUtil.findElementByXpathAndClick(clickLower);
+        driverUtil.xpathAndClick(clickLower);
         Thread.sleep(3000);
         String getAgentNumberTotal = driverUtil.getTextByXpath(agentNumberTotal);
         String a1 = getAgentNumberTotal.substring(2,getAgentNumberTotal.indexOf(" 条"));
@@ -125,18 +125,18 @@ public class BusinessDetailCashTestCase {
     @Title("验证现金代理商户税收总计金额等于下级经营明细税收减去今日税收")
     @Test(priority = 3)
     public void taxTotal() throws InterruptedException {
-        driverUtil.findElementByXpathAndClick(clickAdmin);
+        driverUtil.xpathAndClick(clickAdmin);
         Thread.sleep(2000);
         String getTaxTotal = driverUtil.getTextByXpath(taxTotal);
         System.out.println("现金商户税收总计:"+getTaxTotal);
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"下级经营明细");
-        driverUtil.findElementByXpathAndClick(lowerRunDetails);
+        driverUtil.xpathAndClick(lowerRunDetails);
         Thread.sleep(2000);
         String getTaxTotal2 = driverUtil.getTextByXpath(taxTotal2);
         BigDecimal taxTotal2Result = StringToNumber.toBigDecimal(getTaxTotal2);
         System.out.println("下级经营明细税收总计："+getTaxTotal2);
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"现金模式游戏输赢统计");
-        driverUtil.findElementByXpathAndClick(cashModelGameLoseOrWin);
+        driverUtil.xpathAndClick(cashModelGameLoseOrWin);
         Thread.sleep(200);
         String getTaxToday = driverUtil.getTextByXpath(taxToday);
         System.out.println("现金游戏输赢今日税收："+getTaxToday);
@@ -173,13 +173,13 @@ public class BusinessDetailCashTestCase {
     @Test(priority = 4)
     public void BusinessCommissionTotal() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"首页");
-        driverUtil.findElementByXpathAndClick(adminHome);
+        driverUtil.xpathAndClick(adminHome);
         Thread.sleep(2000);
         String getHomeCommissionToday = driverUtil.getTextByXpath(homeCommissionToday);
         BigDecimal homeCommissionTodayResult = StringToNumber.toBigDecimal(getHomeCommissionToday);
         System.out.println("首页今日佣金："+getHomeCommissionToday);
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"下级经营明细");
-        driverUtil.findElementByXpathAndClick(lowerRunDetails);
+        driverUtil.xpathAndClick(lowerRunDetails);
         Thread.sleep(4000);
         String getLowerCommissionBusiness2 = driverUtil.getTextByXpath(lowerCommissionBusiness2);
         String getLowerCommissionBusiness3 = driverUtil.getTextByXpath(lowerCommissionBusiness3);
@@ -190,7 +190,7 @@ public class BusinessDetailCashTestCase {
         BigDecimal lowerCommissionResult = a2.add(a3).add(a4);
         System.out.println("下级经营明细所有商户佣金总计："+lowerCommissionResult);
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"现金推广代理");
-        driverUtil.findElementByXpathAndClick(clickCashAgent);
+        driverUtil.xpathAndClick(clickCashAgent);
         Thread.sleep(2000);
         String getAgentCommissionBusiness2 = driverUtil.getTextByXpath(agentCommissionBusiness2);
         String getAgentCommissionBusiness3 = driverUtil.getTextByXpath(agentCommissionBusiness3);

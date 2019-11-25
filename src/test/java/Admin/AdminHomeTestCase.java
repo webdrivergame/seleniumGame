@@ -33,7 +33,7 @@ public class AdminHomeTestCase {
     public void loginAdmin() throws InterruptedException {
         driverUtil.loginBefore(Url);
         driverUtil.adminLogin(username,password);
-        driverUtil.findElementByXpathAndClick(login);
+        driverUtil.xpathAndClick(login);
         Thread.sleep(4000);
     }
 
@@ -60,7 +60,7 @@ public class AdminHomeTestCase {
         String getServiceIncomeToday = driverUtil.getTextByXpath(ServiceIncomeToday);
         System.out.println("首页-今日服务费收入："+getServiceIncomeToday);
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"下级服务费统计");
-        driverUtil.findElementByXpathAndClick(clickLowerServiceStatistics);
+        driverUtil.xpathAndClick(clickLowerServiceStatistics);
         Thread.sleep(3000);
         String getMyServiceTotal = driverUtil.getTextByXpath(MyServiceTotal);
         System.out.println("下级服务费统计-今日服务费："+getMyServiceTotal);
@@ -89,13 +89,13 @@ public class AdminHomeTestCase {
     @Test(priority = 2)
     public void sinceBusinessOperationsTotalArrears() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"首页");
-        driverUtil.findElementByXpathAndClick(adminHome);
+        driverUtil.xpathAndClick(adminHome);
         Thread.sleep(3000);
         String getServiceIncomeTotal = driverUtil.getTextByXpath(ServiceIncomeTotal);
         BigDecimal a1 = StringToNumber.toBigDecimal(getServiceIncomeTotal).abs();
         System.out.println("首页-服务费收入总计："+a1);
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"下级服务费统计");
-        driverUtil.findElementByXpathAndClick(clickLowerServiceStatistics);
+        driverUtil.xpathAndClick(clickLowerServiceStatistics);
         Thread.sleep(3000);
         String getGenerateServiceTotal = driverUtil.getTextByXpath(generateServiceTotal);
         String getServiceToday = driverUtil.getTextByXpath(ServiceToday);
@@ -131,12 +131,12 @@ public class AdminHomeTestCase {
     @Test(priority = 4)
     public void playerNumber() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"首页");
-        driverUtil.findElementByXpathAndClick(adminHome);
+        driverUtil.xpathAndClick(adminHome);
         Thread.sleep(3000);
         String getPlayerNumberToday = driverUtil.getTextByXpath(playerNumberToday);
         System.out.println("首页-今日新增玩家："+getPlayerNumberToday);
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"信用留存统计");
-        driverUtil.findElementByXpathAndClick(clickCreditRetainedStatistics);
+        driverUtil.xpathAndClick(clickCreditRetainedStatistics);
         Thread.sleep(3000);
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");//设置日期格式
         Date date = new Date();//Date转换String
@@ -176,13 +176,13 @@ public class AdminHomeTestCase {
     @Test(priority = 5)
     public void systemWinOrLose() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"首页");
-        driverUtil.findElementByXpathAndClick(adminHome);
+        driverUtil.xpathAndClick(adminHome);
         Thread.sleep(3000);
         String getSystemWinOrLose = driverUtil.getTextByXpath(systemWinOrLose);
         BigDecimal a1 = StringToNumber.toBigDecimal(getSystemWinOrLose).abs();
         System.out.println("首页-今日系统盈亏:"+a1);
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"现金模式游戏输赢统计");
-        driverUtil.findElementByXpathAndClick(clickCashModelGameLoseOrWin);
+        driverUtil.xpathAndClick(clickCashModelGameLoseOrWin);
         Thread.sleep(3000);
         String getCashGameWinOrLose = driverUtil.getTextByXpath(cashModelGameLoseOrWin);
         BigDecimal b1 = StringToNumber.toBigDecimal(getCashGameWinOrLose).abs();
@@ -214,13 +214,13 @@ public class AdminHomeTestCase {
     @Test(priority = 6)
     public void todayCommission() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"首页");
-        driverUtil.findElementByXpathAndClick(adminHome);
+        driverUtil.xpathAndClick(adminHome);
         Thread.sleep(3000);
         String getCommissionToday = driverUtil.getTextByXpath(commissionToday);
         BigDecimal a1 = new BigDecimal(getCommissionToday);
         System.out.println("首页-今日佣金总计"+a1);
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"下级经营明细");
-        driverUtil.findElementByXpathAndClick(clickLowerRunDetails);
+        driverUtil.xpathAndClick(clickLowerRunDetails);
         Thread.sleep(3000);
         String getBusinessCommissionToday2 = driverUtil.getTextByXpath(businessCommissionToday2);
         String getBusinessCommissionToday3 = driverUtil.getTextByXpath(businessCommissionToday3);
@@ -255,12 +255,12 @@ public class AdminHomeTestCase {
     @Test(enabled = false)
     public void totalCommission() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"首页");
-        driverUtil.findElementByXpathAndClick(adminHome);
+        driverUtil.xpathAndClick(adminHome);
         Thread.sleep(3000);
         String getTotalCommission = driverUtil.getTextByXpath(totalCommission);
         System.out.println("首页-佣金总计："+getTotalCommission);
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"现金推广代理");
-        driverUtil.findElementByXpathAndClick(clickCashAgent);
+        driverUtil.xpathAndClick(clickCashAgent);
         Thread.sleep(3000);
         String getBusinessCommission = driverUtil.getTextByXpath(commissionTotal);
         System.out.println("下级佣金统计："+getBusinessCommission);
@@ -291,13 +291,13 @@ public class AdminHomeTestCase {
     @Test(priority = 8)
     public void rechargeMoneyToday() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"首页");
-        driverUtil.findElementByXpathAndClick(adminHome);
+        driverUtil.xpathAndClick(adminHome);
         Thread.sleep(3000);
         String getRechargeMoneyToday = driverUtil.getTextByXpath(rechargeMoneyToday);
         BigDecimal a1 = StringToNumber.toBigDecimal(getRechargeMoneyToday);
         System.out.println("首页-今日充值金额："+a1);
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"现金-充值提现记录");
-        driverUtil.findElementByXpathAndClick(clickCashRechargeWithdrawRecord);
+        driverUtil.xpathAndClick(clickCashRechargeWithdrawRecord);
         Thread.sleep(3000);
         String getRechargeTotalArtificial = driverUtil.getTextByXpath(rechargeTotalArtificial);
         System.out.println("人工充值金额："+getRechargeTotalArtificial);
@@ -331,12 +331,12 @@ public class AdminHomeTestCase {
     @Test(priority = 9)
     public void withdrawMoneyToday() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"首页");
-        driverUtil.findElementByXpathAndClick(adminHome);
+        driverUtil.xpathAndClick(adminHome);
         Thread.sleep(3000);
         String getWithdrawMoneyToday = driverUtil.getTextByXpath(withdrawMoneyToday);
         System.out.println("首页-今日提现金额："+getWithdrawMoneyToday);
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"现金-充值提现记录");
-        driverUtil.findElementByXpathAndClick(clickCashRechargeWithdrawRecord);
+        driverUtil.xpathAndClick(clickCashRechargeWithdrawRecord);
         Thread.sleep(3000);
         String getWithdrawTotalOnline = driverUtil.getTextByXpath(withdrawTotalOnline);
         System.out.println("在线提现金额："+getWithdrawTotalOnline);
@@ -366,14 +366,14 @@ public class AdminHomeTestCase {
     @Test(priority = 10)
     public void waitRechargeCommission() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"首页");
-        driverUtil.findElementByXpathAndClick(adminHome);
+        driverUtil.xpathAndClick(adminHome);
         Thread.sleep(2000);
-        driverUtil.findElementByXpathAndClick(detail);
+        driverUtil.xpathAndClick(detail);
         Thread.sleep(2000);
         String getWaitRechargeCommissionHome = driverUtil.getTextByXpath(waitRechargeCommissionHome);
         System.out.println("首页商户详情待结算佣金："+getWaitRechargeCommissionHome);
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"现金推广代理");
-        driverUtil.findElementByXpathAndClick(cashAgent);
+        driverUtil.xpathAndClick(cashAgent);
         Thread.sleep(2000);
         String getWaitRechargeCommissionAgent = driverUtil.getTextByXpath(waitRechargeCommissionAgent);
         System.out.println("现金代理商户待结算佣金："+getWaitRechargeCommissionAgent);
@@ -403,19 +403,19 @@ public class AdminHomeTestCase {
     @Test(priority = 11)
     public void playerNumberDetail() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"首页");
-        driverUtil.findElementByXpathAndClick(adminHome);
+        driverUtil.xpathAndClick(adminHome);
         Thread.sleep(2000);
-        driverUtil.findElementByXpathAndClick(detail);
+        driverUtil.xpathAndClick(detail);
         Thread.sleep(2000);
         String getPlayerNumberDetail = driverUtil.getTextByXpath(playerNumberDetail);
         System.out.println("首页详情玩家人数："+getPlayerNumberDetail);
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"现金推广代理");
-        driverUtil.findElementByXpathAndClick(cashAgent);
+        driverUtil.xpathAndClick(cashAgent);
         Thread.sleep(2000);
         String getPlayerNumberCashAgent = driverUtil.getTextByXpath(playerNumberCashAgent);
         System.out.println("现金推广代理玩家人数："+getPlayerNumberCashAgent);
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"下级经营明细");
-        driverUtil.findElementByXpathAndClick(lowerRunDetail);
+        driverUtil.xpathAndClick(lowerRunDetail);
         Thread.sleep(2000);
         String getPlayerNumberLowerRunDetail = driverUtil.getTextByXpath(playerNumberLowerRunDetail);
         System.out.println("下级经营明细玩家人数："+getPlayerNumberLowerRunDetail);
@@ -442,13 +442,13 @@ public class AdminHomeTestCase {
     @Test(priority = 12)
     public void creditModelTaxMoneyToday() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"首页");
-        driverUtil.findElementByXpathAndClick(adminHome);
+        driverUtil.xpathAndClick(adminHome);
         Thread.sleep(2000);
         String getCreditModelTaxMoneyTodayHome = driverUtil.getTextByXpath(creditModelTaxMoneyTodayHome);
         String a1 = getCreditModelTaxMoneyTodayHome.substring(2);
         System.out.println("首页今日信用模式税收："+a1);
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"信用模式游戏输赢统计");
-        driverUtil.findElementByXpathAndClick(clickCreditModelLoseOrWin);
+        driverUtil.xpathAndClick(clickCreditModelLoseOrWin);
         Thread.sleep(2000);
         String getTaxWinOrLose = driverUtil.getTextByXpath(taxWinOrLose);
         Assertion.setFlag(true);
@@ -475,13 +475,13 @@ public class AdminHomeTestCase {
     @Test(priority = 12)
     public void cashModelTaxMoneyToday() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"首页");
-        driverUtil.findElementByXpathAndClick(adminHome);
+        driverUtil.xpathAndClick(adminHome);
         Thread.sleep(2000);
         String getCashModelTaxMoneyTodayHome = driverUtil.getTextByXpath(cashModelTaxMoneyTodayHome);
         String a1 = getCashModelTaxMoneyTodayHome.substring(2);
         System.out.println("首页今日现金模式税收："+a1);
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"现金模式游戏输赢统计");
-        driverUtil.findElementByXpathAndClick(clickCashModelLoseOrWin);
+        driverUtil.xpathAndClick(clickCashModelLoseOrWin);
         Thread.sleep(2000);
         String getTaxWinOrLoseCash = driverUtil.getTextByXpath(taxWinOrLoseCash);
         Assertion.setFlag(true);
@@ -508,14 +508,14 @@ public class AdminHomeTestCase {
     @Test(priority = 13)
     public void creditModelSystemLoseOrWinToday() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"首页");
-        driverUtil.findElementByXpathAndClick(adminHome);
+        driverUtil.xpathAndClick(adminHome);
         Thread.sleep(2000);
-        driverUtil.findElementByXpathAndClick(clickCreditModelSystemLoseOrWinTodayHome);
+        driverUtil.xpathAndClick(clickCreditModelSystemLoseOrWinTodayHome);
         String getCreditModelSystemLoseOrWinTodayHome = driverUtil.getTextByXpath(creditModelSystemLoseOrWinTodayHome);
         String a1 = getCreditModelSystemLoseOrWinTodayHome.substring(2);
         System.out.println("首页今日信用模式系统输赢："+a1);
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"现金模式游戏输赢统计");
-        driverUtil.findElementByXpathAndClick(clickCreditModelLoseOrWin);
+        driverUtil.xpathAndClick(clickCreditModelLoseOrWin);
         Thread.sleep(2000);
         String getCreditModelSystemLoseOrWinToday = driverUtil.getTextByXpath(creditModelSystemLoseOrWinToday);
         BigDecimal b1 = new BigDecimal(getCreditModelSystemLoseOrWinToday).abs();
@@ -544,14 +544,14 @@ public class AdminHomeTestCase {
     @Test(priority = 14)
     public void cashModelSystemLoseOrWinToday() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"首页");
-        driverUtil.findElementByXpathAndClick(adminHome);
+        driverUtil.xpathAndClick(adminHome);
         Thread.sleep(2000);
-        driverUtil.findElementByXpathAndClick(clickCashModelSystemLoseOrWinTodayHome);
+        driverUtil.xpathAndClick(clickCashModelSystemLoseOrWinTodayHome);
         String getCashModelSystemLoseOrWinTodayHome = driverUtil.getTextByXpath(cashModelSystemLoseOrWinTodayHome);
         String a1 = getCashModelSystemLoseOrWinTodayHome.substring(2);
         System.out.println("首页今日现金模式系统输赢："+a1);
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"现金模式游戏输赢统计");
-        driverUtil.findElementByXpathAndClick(clickCashModelLoseOrWin);
+        driverUtil.xpathAndClick(clickCashModelLoseOrWin);
         Thread.sleep(2000);
         String getCashModelSystemLoseOrWinToday = driverUtil.getTextByXpath(cashModelSystemLoseOrWinToday);
         BigDecimal b1 = new BigDecimal(getCashModelSystemLoseOrWinToday).abs();
@@ -581,14 +581,14 @@ public class AdminHomeTestCase {
     @Test(priority = 15)
     public void creditPlayerLoginNumberToday() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"首页");
-        driverUtil.findElementByXpathAndClick(adminHome);
+        driverUtil.xpathAndClick(adminHome);
         Thread.sleep(2000);
-        driverUtil.findElementByXpathAndClick(clickCreditPlayerLoginNumberToday);
+        driverUtil.xpathAndClick(clickCreditPlayerLoginNumberToday);
         String getCreditPlayerLoginNumberToday = driverUtil.getTextByXpath(creditPlayerLoginNumberToday);
         String a1 = getCreditPlayerLoginNumberToday.substring(0,getCreditPlayerLoginNumberToday.indexOf("人"));
         System.out.println("信用玩家今日登录人数："+a1);
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"信用留存统计");
-        driverUtil.findElementByXpathAndClick(creditRetainStatistics);
+        driverUtil.xpathAndClick(creditRetainStatistics);
         Thread.sleep(2000);
         String getCreditRetainStatisticsAddToday = driverUtil.getTextByXpath(creditRetainStatisticsAddToday);
         System.out.println("信用留存今日新增玩家："+getCreditRetainStatisticsAddToday);
@@ -617,14 +617,14 @@ public class AdminHomeTestCase {
     @Test(priority = 15)
     public void cashPlayerLoginNumberToday() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"首页");
-        driverUtil.findElementByXpathAndClick(adminHome);
+        driverUtil.xpathAndClick(adminHome);
         Thread.sleep(2000);
-        driverUtil.findElementByXpathAndClick(clickCashPlayerLoginNumberToday);
+        driverUtil.xpathAndClick(clickCashPlayerLoginNumberToday);
         String getCashPlayerLoginNumberToday = driverUtil.getTextByXpath(cashPlayerLoginNumberToday);
         String a1 = getCashPlayerLoginNumberToday.substring(0,getCashPlayerLoginNumberToday.indexOf("人"));
         System.out.println("现金玩家今日登录人数："+a1);
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"现金留存统计");
-        driverUtil.findElementByXpathAndClick(cashRetainStatistics);
+        driverUtil.xpathAndClick(cashRetainStatistics);
         Thread.sleep(2000);
         String getCashRetainStatisticsAddToday = driverUtil.getTextByXpath(cashRetainStatisticsLoginToday);
         System.out.println("信用留存今日新增玩家："+getCashRetainStatisticsAddToday);
@@ -645,9 +645,9 @@ public class AdminHomeTestCase {
     @Test(priority = 16)
     public void addPlayerToday() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"首页");
-        driverUtil.findElementByXpathAndClick(adminHome);
+        driverUtil.xpathAndClick(adminHome);
         Thread.sleep(2000);
-        driverUtil.findElementByXpathAndClick(clickAddPlayer);
+        driverUtil.xpathAndClick(clickAddPlayer);
         Thread.sleep(2000);
         String getCreditAddPlayerHome = driverUtil.getTextByXpath(creditAddPlayerHome);
         String getCashAddPlayerHome = driverUtil.getTextByXpath(cashAddPlayerHome);
@@ -655,10 +655,10 @@ public class AdminHomeTestCase {
         String a2 = getCashAddPlayerHome.substring(0,getCashAddPlayerHome.indexOf("人"));
         System.out.println("信用首页今日注册玩家："+a1);
         System.out.println("现金首页今日注册玩家："+a2);
-        driverUtil.findElementByXpathAndClick(creditRetainStatistics);
+        driverUtil.xpathAndClick(creditRetainStatistics);
         Thread.sleep(2000);
         String getCreditAddPlayerRetain = driverUtil.getTextByXpath(creditAddPlayerRetain);
-        driverUtil.findElementByXpathAndClick(cashRetainStatistics);
+        driverUtil.xpathAndClick(cashRetainStatistics);
         Thread.sleep(2000);
         String getCashAddPlayerRetain = driverUtil.getTextByXpath(cashAddPlayerRetain);
         System.out.println("信用留存今日新增："+getCreditAddPlayerRetain);
@@ -691,9 +691,9 @@ public class AdminHomeTestCase {
     @Test(priority = 17)
     public void creditRechargeWithdraw() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"首页");
-        driverUtil.findElementByXpathAndClick(adminHome);
+        driverUtil.xpathAndClick(adminHome);
         Thread.sleep(2000);
-        driverUtil.findElementByXpathAndClick(clickCreditRechargeWithdraw);
+        driverUtil.xpathAndClick(clickCreditRechargeWithdraw);
         Thread.sleep(2000);
         String getCreditRecharge = driverUtil.getTextByXpath(creditRecharge);
         String getCreditWithdraw = driverUtil.getTextByXpath(creditWithdraw);
@@ -701,7 +701,7 @@ public class AdminHomeTestCase {
         String a2 = getCreditWithdraw.substring(2);
         System.out.println("首页信用今日充值："+a1);
         System.out.println("首页信用今日提现："+a2);
-        driverUtil.findElementByXpathAndClick(creditRefreshRecord);
+        driverUtil.xpathAndClick(creditRefreshRecord);
         Thread.sleep(2000);
         String getAddPoint = driverUtil.getTextByXpath(addPoint);
         String getMinusPoint = driverUtil.getTextByXpath(minusPoint);

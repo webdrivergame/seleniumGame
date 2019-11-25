@@ -47,7 +47,7 @@ public class MyServiceAccountChangeTestCase {
     @Test(priority = 1)
     public void myServiceAccountChangeMoney() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"我的服务费账户变动");
-        driverUtil.findElementByXpathAndClick(myServiceAccountChangeMoney);
+        driverUtil.xpathAndClick(myServiceAccountChangeMoney);
         Thread.sleep(2000);
         String getChangeWhy = driverUtil.getTextByXpath(changeWhy);
         String getChangeMoney = driverUtil.getTextByXpath(changeMoney);

@@ -29,7 +29,7 @@ public class AgentHomeCreditTestCase {
     public void login() throws InterruptedException {
         driverUtil.loginBefore(Url);
         driverUtil.adminLogin(username,password);
-        driverUtil.findElementByXpathAndClick(login);
+        driverUtil.xpathAndClick(login);
         Thread.sleep(4000);
     }
 
@@ -63,7 +63,7 @@ public class AgentHomeCreditTestCase {
         System.out.println("信用代理首页今日新增玩家："+getAddPlayerTodayHome);
         System.out.println("信用代理首页昨日新增玩家："+getAddPlayerYesterdayHome);
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"信用留存统计");
-        driverUtil.findElementByXpathAndClick(creditRetainedStatistics);
+        driverUtil.xpathAndClick(creditRetainedStatistics);
         Thread.sleep(2000);
         String getDateToday = driverUtil.getTextByXpath(dateToday);
         System.out.println("获取今日日期："+getDateToday);
@@ -108,14 +108,14 @@ public class AgentHomeCreditTestCase {
     @Test(priority = 2)
     public void activePlayerTodayHome() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"首页");
-        driverUtil.findElementByXpathAndClick(home);
+        driverUtil.xpathAndClick(home);
         Thread.sleep(2000);
         String getActivePlayerTodayHome = driverUtil.getTextByXpath(activePlayerTodayHome);
         String getActivePlayerYesterdayHome = driverUtil.getTextByXpath(activePlayerYesterdayHome);
         System.out.println("首页今日活跃玩家："+getActivePlayerTodayHome);
         System.out.println("首页昨日活跃玩家："+getActivePlayerYesterdayHome);
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"信用留存统计");
-        driverUtil.findElementByXpathAndClick(creditRetainedStatistics);
+        driverUtil.xpathAndClick(creditRetainedStatistics);
         Thread.sleep(2000);
         String getDateToday = driverUtil.getTextByXpath(dateToday);
         System.out.println("获取今日日期："+getDateToday);
@@ -157,13 +157,13 @@ public class AgentHomeCreditTestCase {
     @Test(priority = 3)
     public void systemLoseOrWinToday() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"首页");
-        driverUtil.findElementByXpathAndClick(home);
+        driverUtil.xpathAndClick(home);
         Thread.sleep(2000);
         String getSystemLoseOrWinToday = driverUtil.getTextByXpath(systemLoseOrWinToday);
         String a1 = getSystemLoseOrWinToday.substring(2);
         System.out.println("首页今日系统输赢："+a1);
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"信用模式游戏输赢统计");
-        driverUtil.findElementByXpathAndClick(creditModelGameLoseOrWin);
+        driverUtil.xpathAndClick(creditModelGameLoseOrWin);
         Thread.sleep(2000);
         String getLoseOrWinTotal = driverUtil.getTextByXpath(loseOrWinTotal);
         System.out.println("信用模式游戏输赢统计："+getLoseOrWinTotal);

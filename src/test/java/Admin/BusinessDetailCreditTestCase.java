@@ -51,21 +51,21 @@ public class BusinessDetailCreditTestCase {
     @Test(priority = 14)
     public void creditExplorerServiceHistoryTotal() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText, "信用模式代理");
-        driverUtil.findElementByXpathAndClick(clickCreditModelAgent);
+        driverUtil.xpathAndClick(clickCreditModelAgent);
         Thread.sleep(3000);
         driverUtil.findElementByXpathAndClearSendkeys(inputBusinessInquire, "zongguan001");
-        driverUtil.findElementByXpathAndClick(Inquire);
+        driverUtil.xpathAndClick(Inquire);
         Thread.sleep(3000);
-        driverUtil.findElementByXpathAndClick(clickCreditBusiness);
+        driverUtil.xpathAndClick(clickCreditBusiness);
         Thread.sleep(2000);
         String getCreditExplorerServiceHistoryTotal = driverUtil.getTextByXpath(creditExplorerServiceHistoryTotal);
         System.out.println("商户历史服务费总计：" + getCreditExplorerServiceHistoryTotal);
         Thread.sleep(2000);
         driverUtil.findElementByXpathAndClearSendkeys(inputText, "下级服务费统计");
-        driverUtil.findElementByXpathAndClick(lowerServiceStatistics);
+        driverUtil.xpathAndClick(lowerServiceStatistics);
         Thread.sleep(3000);
         driverUtil.findElementByXpathAndClearSendkeys(inputBusiness2, "zongguan001");
-        driverUtil.findElementByXpathAndClick(Inquire);
+        driverUtil.xpathAndClick(Inquire);
         Thread.sleep(3000);
         String getCreditExplorerServiceHistoryTotal1 = driverUtil.getTextByXpath(creditExplorerServiceHistoryTotal1);
         System.out.println("下级服务费统计-生成服务费总计：" + getCreditExplorerServiceHistoryTotal1);
@@ -97,21 +97,21 @@ public class BusinessDetailCreditTestCase {
     @Test(priority = 15)
     public void creditExplorerAccountBalance() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText, "信用模式代理");
-        driverUtil.findElementByXpathAndClick(clickCreditModelAgent);
+        driverUtil.xpathAndClick(clickCreditModelAgent);
         Thread.sleep(3000);
         driverUtil.findElementByXpathAndClearSendkeys(inputBusinessInquire, "zongguan001");
-        driverUtil.findElementByXpathAndClick(Inquire);
+        driverUtil.xpathAndClick(Inquire);
         Thread.sleep(3000);
-        driverUtil.findElementByXpathAndClick(clickCreditBusiness);
+        driverUtil.xpathAndClick(clickCreditBusiness);
         Thread.sleep(2000);
         String getServiceAccountBalance = driverUtil.getTextByXpath(serviceAccountBalance);
         System.out.println("商户服务费账户余额：" + getServiceAccountBalance);
         Thread.sleep(2000);
         driverUtil.findElementByXpathAndClearSendkeys(inputText, "下级服务费统计");
-        driverUtil.findElementByXpathAndClick(lowerServiceStatistics);
+        driverUtil.xpathAndClick(lowerServiceStatistics);
         Thread.sleep(3000);
         driverUtil.findElementByXpathAndClearSendkeys(inputBusiness2, "zongguan001");
-        driverUtil.findElementByXpathAndClick(Inquire);
+        driverUtil.xpathAndClick(Inquire);
         Thread.sleep(3000);
         String getSettlementBalanceAfterToady = driverUtil.getTextByXpath(settlementBalanceAfter);
         System.out.println("下级服务费统计-当前账户余额：" + getSettlementBalanceAfterToady);
@@ -147,25 +147,25 @@ public class BusinessDetailCreditTestCase {
     @Test(priority = 16)
     public void creditBusinessServiceHistoryTotal() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText, "信用模式代理");
-        driverUtil.findElementByXpathAndClick(clickCreditModelAgent);
+        driverUtil.xpathAndClick(clickCreditModelAgent);
         Thread.sleep(3000);
-        driverUtil.findElementByXpathAndClick(clickLowerBusiness2);
+        driverUtil.xpathAndClick(clickLowerBusiness2);
         Thread.sleep(2000);
         driverUtil.findElementByXpathAndClearSendkeys(inputLowerBusiness, "wxjb66");
-        driverUtil.findElementByXpathAndClick(Inquire);
+        driverUtil.xpathAndClick(Inquire);
         Thread.sleep(2000);
-        driverUtil.findElementByXpathAndClick(clickLowerCreditBusiness2);
+        driverUtil.xpathAndClick(clickLowerCreditBusiness2);
         Thread.sleep(2000);
         String getLowerServiceHistory = driverUtil.getTextByXpath(lowerServiceHistory);
         System.out.println("商务历史服务费总计："+getLowerServiceHistory);
         Thread.sleep(2000);
         driverUtil.findElementByXpathAndClearSendkeys(inputText, "下级服务费统计");
-        driverUtil.findElementByXpathAndClick(lowerServiceStatistics);
+        driverUtil.xpathAndClick(lowerServiceStatistics);
         Thread.sleep(3000);
-        driverUtil.findElementByXpathAndClick(clickLowerBusiness2);
+        driverUtil.xpathAndClick(clickLowerBusiness2);
         Thread.sleep(2000);
         driverUtil.findElementByXpathAndClearSendkeys(sendKeysLowerBusiness,"wxjb66");
-        driverUtil.findElementByXpathAndClick(Inquire);
+        driverUtil.xpathAndClick(Inquire);
         Thread.sleep(2000);
         String getServiceTotal = driverUtil.getTextByXpath(serviceTotal);
         System.out.println("商务生成服务费总计金额："+getServiceTotal);
@@ -200,25 +200,25 @@ public class BusinessDetailCreditTestCase {
     @Test(priority = 17)
     public void creditBusinessServiceAccountBalance() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText, "信用模式代理");
-        driverUtil.findElementByXpathAndClick(clickCreditModelAgent);
+        driverUtil.xpathAndClick(clickCreditModelAgent);
         Thread.sleep(3000);
-        driverUtil.findElementByXpathAndClick(clickLowerBusiness2);
+        driverUtil.xpathAndClick(clickLowerBusiness2);
         Thread.sleep(2000);
         driverUtil.findElementByXpathAndClearSendkeys(inputLowerBusiness, "wxjb66");
-        driverUtil.findElementByXpathAndClick(Inquire);
+        driverUtil.xpathAndClick(Inquire);
         Thread.sleep(2000);
-        driverUtil.findElementByXpathAndClick(clickLowerCreditBusiness2);
+        driverUtil.xpathAndClick(clickLowerCreditBusiness2);
         Thread.sleep(2000);
         String getLowerBusinessServiceAccountBalance = driverUtil.getTextByXpath(lowerBusinessServiceAccountBalance);
         System.out.println("商务服务费账户余额："+getLowerBusinessServiceAccountBalance);
         Thread.sleep(2000);
         driverUtil.findElementByXpathAndClearSendkeys(inputText, "下级服务费统计");
-        driverUtil.findElementByXpathAndClick(lowerServiceStatistics);
+        driverUtil.xpathAndClick(lowerServiceStatistics);
         Thread.sleep(3000);
-        driverUtil.findElementByXpathAndClick(clickLowerBusiness2);
+        driverUtil.xpathAndClick(clickLowerBusiness2);
         Thread.sleep(2000);
         driverUtil.findElementByXpathAndClearSendkeys(sendKeysLowerBusiness,"wxjb66");
-        driverUtil.findElementByXpathAndClick(Inquire);
+        driverUtil.xpathAndClick(Inquire);
         Thread.sleep(2000);
         String getSettlementBalanceToday = driverUtil.getTextByXpath(settlementBalanceToday);
         System.out.println("商务当前账户余额："+getSettlementBalanceToday);
@@ -256,25 +256,25 @@ public class BusinessDetailCreditTestCase {
     @Test(priority = 18)
     public void creditAgentServiceHistoryTotal() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText, "信用模式代理");
-        driverUtil.findElementByXpathAndClick(clickCreditModelAgent);
+        driverUtil.xpathAndClick(clickCreditModelAgent);
         Thread.sleep(3000);
-        driverUtil.findElementByXpathAndClick(clickCreditAgent);
+        driverUtil.xpathAndClick(clickCreditAgent);
         Thread.sleep(2000);
         driverUtil.findElementByXpathAndClearSendkeys(inputCreditAgent, "wxjbdl1");
-        driverUtil.findElementByXpathAndClick(Inquire);
+        driverUtil.xpathAndClick(Inquire);
         Thread.sleep(3000);
-        driverUtil.findElementByXpathAndClick(clickCreditAgent2);
+        driverUtil.xpathAndClick(clickCreditAgent2);
         Thread.sleep(2000);
         String getCreditAgentServiceHistoryTotal = driverUtil.getTextByXpath(creditAgentServiceHistoryTotal);
         System.out.println("信用代理历史服务费总计：" + getCreditAgentServiceHistoryTotal);
         Thread.sleep(2000);
         driverUtil.findElementByXpathAndClearSendkeys(inputText, "下级服务费统计");
-        driverUtil.findElementByXpathAndClick(lowerServiceStatistics);
+        driverUtil.xpathAndClick(lowerServiceStatistics);
         Thread.sleep(2000);
-        driverUtil.findElementByXpathAndClick(clickCreditAgent3);
+        driverUtil.xpathAndClick(clickCreditAgent3);
         Thread.sleep(2000);
         driverUtil.findElementByXpathAndClearSendkeys(sendKeysCreditAgent,"wxjbdl1");
-        driverUtil.findElementByXpathAndClick(Inquire);
+        driverUtil.xpathAndClick(Inquire);
         Thread.sleep(2000);
         String getCreditAgentServiceTotal = driverUtil.getTextByXpath(creditAgentServiceTotal);
         System.out.println("信用代理生成服务费总计："+getCreditAgentServiceTotal);
@@ -307,25 +307,25 @@ public class BusinessDetailCreditTestCase {
     @Test(priority = 19)
     public void creditAgentServiceAccountBalance() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText, "信用模式代理");
-        driverUtil.findElementByXpathAndClick(clickCreditModelAgent);
+        driverUtil.xpathAndClick(clickCreditModelAgent);
         Thread.sleep(3000);
-        driverUtil.findElementByXpathAndClick(clickCreditAgent);
+        driverUtil.xpathAndClick(clickCreditAgent);
         Thread.sleep(2000);
         driverUtil.findElementByXpathAndClearSendkeys(inputCreditAgent, "wxjbdl1");
-        driverUtil.findElementByXpathAndClick(Inquire);
+        driverUtil.xpathAndClick(Inquire);
         Thread.sleep(3000);
-        driverUtil.findElementByXpathAndClick(clickCreditAgent2);
+        driverUtil.xpathAndClick(clickCreditAgent2);
         Thread.sleep(2000);
         String getCreditAgentAccountBalance = driverUtil.getTextByXpath(creditAgentAccountBalance);
         System.out.println("信用代理服务费账户余额：" + getCreditAgentAccountBalance);
         Thread.sleep(2000);
         driverUtil.findElementByXpathAndClearSendkeys(inputText, "下级服务费统计");
-        driverUtil.findElementByXpathAndClick(lowerServiceStatistics);
+        driverUtil.xpathAndClick(lowerServiceStatistics);
         Thread.sleep(2000);
-        driverUtil.findElementByXpathAndClick(clickCreditAgent3);
+        driverUtil.xpathAndClick(clickCreditAgent3);
         Thread.sleep(2000);
         driverUtil.findElementByXpathAndClearSendkeys(sendKeysCreditAgent,"wxjbdl1");
-        driverUtil.findElementByXpathAndClick(Inquire);
+        driverUtil.xpathAndClick(Inquire);
         Thread.sleep(2000);
         String getCreditAgentServiceBalance = driverUtil.getTextByXpath(creditAgentServiceBalance);
         System.out.println("信用代理当前账户余额："+getCreditAgentServiceBalance);

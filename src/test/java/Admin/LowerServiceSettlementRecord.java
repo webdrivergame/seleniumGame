@@ -54,13 +54,13 @@ public class LowerServiceSettlementRecord {
     @Test(priority = 1)
     public void explorerSettlement() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"下级服务费结算记录");
-        driverUtil.findElementByXpathAndClick(lowerServiceSettlementRecord);
+        driverUtil.xpathAndClick(lowerServiceSettlementRecord);
         Thread.sleep(2000);
-        driverUtil.findElementByXpathAndClick(settlement);
+        driverUtil.xpathAndClick(settlement);
         driverUtil.findElementByXpathAndClearSendkeys(inputSettlementMoney,"100");
-        driverUtil.findElementByXpathAndClick(sure);
+        driverUtil.xpathAndClick(sure);
         Thread.sleep(2000);
-        driverUtil.findElementByXpathAndClick(detail);
+        driverUtil.xpathAndClick(detail);
         Thread.sleep(2000);
         String getOperatingMoney = driverUtil.getTextByXpath(operatingMoney);
         String getOperatingMoneyBefore = driverUtil.getTextByXpath(operatingMoneyBefore);
@@ -108,13 +108,13 @@ public class LowerServiceSettlementRecord {
     @Title("验证下级服务费商务结算金额变动无误")
     @Test(priority = 2)
     public void businessSettlement() throws InterruptedException {
-        driverUtil.findElementByXpathAndClick(comeback);
-        driverUtil.findElementByXpathAndClick(clickBusiness);
+        driverUtil.xpathAndClick(comeback);
+        driverUtil.xpathAndClick(clickBusiness);
         Thread.sleep(2000);
         driverUtil.findElementByXpathAndClearSendkeys(inputBusiness,"wxjb66");
-        driverUtil.findElementByXpathAndClick(input);
+        driverUtil.xpathAndClick(input);
         Thread.sleep(2000);
-        driverUtil.findElementByXpathAndClick(businessDetail);
+        driverUtil.xpathAndClick(businessDetail);
         Thread.sleep(2000);
         String getBusinessOperatingMoney = driverUtil.getTextByXpath(businessOperatingMoney);
         String getBusinessOperatingMoneyBefore = driverUtil.getTextByXpath(businessOperatingMoneyBefore);

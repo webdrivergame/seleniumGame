@@ -52,13 +52,13 @@ public class ModeComplexStatisticsCashTestCase {
     @Test(priority = 1)
     public void loginNumber() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"现金模式综合统计");
-        driverUtil.findElementByXpathAndClick(clickCashModelComplexStatistics);
+        driverUtil.xpathAndClick(clickCashModelComplexStatistics);
         Thread.sleep(3000);
         //((JavascriptExecutor) driverUtil).executeScript("window.scroll into view(10000,1024);");
         String getLoginNumber = driverUtil.getTextByXpath(loginNumber);
         System.out.println("现金综合统计登录人数："+getLoginNumber);
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"现金留存统计");
-        driverUtil.findElementByXpathAndClick(cashRetainedStatistics);
+        driverUtil.xpathAndClick(cashRetainedStatistics);
         Thread.sleep(2000);
         String getDateToday = driverUtil.getTextByXpath(dateToday);
         System.out.println("现金留存获取页面时间："+getDateToday);
@@ -101,12 +101,12 @@ public class ModeComplexStatisticsCashTestCase {
     @Test(priority = 2)
     public void registeredNumber() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"现金模式综合统计");
-        driverUtil.findElementByXpathAndClick(clickCashModelComplexStatistics);
+        driverUtil.xpathAndClick(clickCashModelComplexStatistics);
         Thread.sleep(3000);
         String getRegisteredNumber = driverUtil.getTextByXpath(registeredNumber);
         System.out.println("现金综合统计注册人数："+getRegisteredNumber);
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"现金留存统计");
-        driverUtil.findElementByXpathAndClick(cashRetainedStatistics);
+        driverUtil.xpathAndClick(cashRetainedStatistics);
         Thread.sleep(2000);
         String getDateToday = driverUtil.getTextByXpath(dateToday);
         System.out.println("现金留存获取页面时间："+getDateToday);
@@ -147,14 +147,14 @@ public class ModeComplexStatisticsCashTestCase {
     @Test(priority = 3)
     public void bindingPhoneNumber() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"现金模式综合统计");
-        driverUtil.findElementByXpathAndClick(clickCashModelComplexStatistics);
+        driverUtil.xpathAndClick(clickCashModelComplexStatistics);
         Thread.sleep(3000);
         String getBindingPhoneNumber = driverUtil.getTextByXpath(bindingPhoneNumber);
         System.out.println("现金综合统计绑定手机数量："+getBindingPhoneNumber);
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"补分");
-        driverUtil.findElementByXpathAndClick(Subdivision);
+        driverUtil.xpathAndClick(Subdivision);
         Thread.sleep(2000);
-        driverUtil.findElementByXpathAndClick(clickSubdivision);
+        driverUtil.xpathAndClick(clickSubdivision);
         Thread.sleep(1000);
         String getBindingPhoneNumberSubdivision = driverUtil.getTextByXpath(bindingPhoneNumberSubdivision);
         System.out.println(getBindingPhoneNumberSubdivision);
@@ -189,13 +189,13 @@ public class ModeComplexStatisticsCashTestCase {
     @Test(priority = 4)
     public void rechargeTotalToday() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"现金模式综合统计");
-        driverUtil.findElementByXpathAndClick(clickCashModelComplexStatistics);
+        driverUtil.xpathAndClick(clickCashModelComplexStatistics);
         Thread.sleep(3000);
         String getRechargeTotalToday = driverUtil.getTextByXpath(rechargeTotalToday);
         BigDecimal a1 = StringToNumber.toBigDecimal(getRechargeTotalToday);
         System.out.println("现金综合统计今日总充值金额："+a1);
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"现金-充值提现记录");
-        driverUtil.findElementByXpathAndClick(clickCashRechargeWithdrawRecord);
+        driverUtil.xpathAndClick(clickCashRechargeWithdrawRecord);
         Thread.sleep(3000);
         String getArtificialRecharge = driverUtil.getTextByXpath(ArtificialRecharge);
         BigDecimal b1 = StringToNumber.toBigDecimal(getArtificialRecharge);
@@ -228,12 +228,12 @@ public class ModeComplexStatisticsCashTestCase {
     @Test(priority = 5)
     public void rechargeNumberTotal() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"现金模式综合统计");
-        driverUtil.findElementByXpathAndClick(clickCashModelComplexStatistics);
+        driverUtil.xpathAndClick(clickCashModelComplexStatistics);
         Thread.sleep(3000);
         String getRechargeNumberTotal = driverUtil.getTextByXpath(rechargeNumberTotal);
         System.out.println("现金综合统计今日总充值人数："+getRechargeNumberTotal);
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"现金-充值提现记录");
-        driverUtil.findElementByXpathAndClick(clickCashRechargeWithdrawRecord);
+        driverUtil.xpathAndClick(clickCashRechargeWithdrawRecord);
         Thread.sleep(3000);
         String getRechargeNumberTotal2 = driverUtil.getTextByXpath(rechargeNumberTotal2);
         System.out.println("现金充值提现记录总充人数："+getRechargeNumberTotal2);
@@ -268,14 +268,14 @@ public class ModeComplexStatisticsCashTestCase {
     @Test(priority = 6)
     public void newRechargeMoney() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"现金模式综合统计");
-        driverUtil.findElementByXpathAndClick(clickCashModelComplexStatistics);
+        driverUtil.xpathAndClick(clickCashModelComplexStatistics);
         Thread.sleep(3000);
         String getNewRechargeMoney = driverUtil.getTextByXpath(newRechargeMoney);
         String getNewAddNumber = driverUtil.getTextByXpath(newAddNumber);
         System.out.println("现金模式综合统计新充金额："+getNewRechargeMoney);
         System.out.println("现金模式综合统计新充人数："+getNewAddNumber);
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"现金-充值提现记录");
-        driverUtil.findElementByXpathAndClick(cashRechargeWithdrawRecord);
+        driverUtil.xpathAndClick(cashRechargeWithdrawRecord);
         Thread.sleep(2000);
         String getRecordNewRechargeMoney = driverUtil.getTextByXpath(recordNewRechargeMoney);
         String getRecordNewAddNumber = driverUtil.getTextByXpath(recordNewAddNumber);
@@ -303,7 +303,7 @@ public class ModeComplexStatisticsCashTestCase {
     @Test(priority = 7)
     public void averagePeopleRechargeMoney() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"现金模式综合统计");
-        driverUtil.findElementByXpathAndClick(clickCashModelComplexStatistics);
+        driverUtil.xpathAndClick(clickCashModelComplexStatistics);
         Thread.sleep(3000);
         String getRechargeTotalToday = driverUtil.getTextByXpath(rechargeTotalToday);
         String getRechargeNumberTotal = driverUtil.getTextByXpath(rechargeNumberTotal);

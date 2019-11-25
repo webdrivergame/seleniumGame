@@ -25,7 +25,7 @@ public class BusinessHomeTestCase {
     public void loginAdmin() throws InterruptedException {
         driverUtil.loginBefore(Url);
         driverUtil.adminLogin(username,password);
-        driverUtil.findElementByXpathAndClick(login);
+        driverUtil.xpathAndClick(login);
         Thread.sleep(4000);
     }
 
@@ -52,11 +52,11 @@ public class BusinessHomeTestCase {
     public void incomeToday() throws InterruptedException {
         String getIncomeToday = driverUtil.getTextByXpath(incomeToday);
         System.out.println("今日收入总计："+getIncomeToday);
-        driverUtil.findElementByXpathAndClick(clickIncomeToday);
+        driverUtil.xpathAndClick(clickIncomeToday);
         Thread.sleep(2000);
-        driverUtil.findElementByXpathAndClick(clickStartDate);
+        driverUtil.xpathAndClick(clickStartDate);
         Thread.sleep(2000);
-        driverUtil.findElementByXpathAndClick(clickToday);
+        driverUtil.xpathAndClick(clickToday);
         Thread.sleep(2000);
         String getIncomeMyCommission = driverUtil.getTextByXpath(incomeMyCommission);
         System.out.println("今日我的佣金收入："+getIncomeMyCommission);
@@ -85,16 +85,16 @@ public class BusinessHomeTestCase {
     @Test(priority = 2)
     public void incomeTotalThirty() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"首页");
-        driverUtil.findElementByXpathAndClick(home);
+        driverUtil.xpathAndClick(home);
         Thread.sleep(3000);
         String getIncomeMonth = driverUtil.getTextByXpath(incomeMonth);
         String incomeTotalThirty = getIncomeMonth.substring(2);
         System.out.println("30日收入总计："+incomeTotalThirty);
-        driverUtil.findElementByXpathAndClick(clickIncomeToday);
+        driverUtil.xpathAndClick(clickIncomeToday);
         Thread.sleep(2000);
-        driverUtil.findElementByXpathAndClick(clickStartDate);
+        driverUtil.xpathAndClick(clickStartDate);
         Thread.sleep(2000);
-        driverUtil.findElementByXpathAndClick(clickMoths);
+        driverUtil.xpathAndClick(clickMoths);
         Thread.sleep(2000);
         String b1 = driverUtil.getTextByXpath(getIncomeMyCommissionMoths);
         System.out.println("30日我的佣金收入："+b1);
@@ -124,11 +124,11 @@ public class BusinessHomeTestCase {
     @Test(priority = 3)
     public void waitSettlementCommission() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"首页");
-        driverUtil.findElementByXpathAndClick(home);
+        driverUtil.xpathAndClick(home);
         Thread.sleep(3000);
         String getWaitSettlementCommission = driverUtil.getTextByXpath(waitSettlementCommission);
         System.out.println("待结算佣金："+getWaitSettlementCommission);
-        driverUtil.findElementByXpathAndClick(clickWaitSettlementCommission);
+        driverUtil.xpathAndClick(clickWaitSettlementCommission);
         Thread.sleep(2000);
         String getChangeAfterMoney = driverUtil.getTextByXpath(changeAfterMoney);
         String getMyWaitSettlementCommission = driverUtil.getTextByXpath(myWaitSettlementCommission);
@@ -164,18 +164,18 @@ public class BusinessHomeTestCase {
     @Test(priority = 5)
     public void lowerSpreadAgent() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"首页");
-        driverUtil.findElementByXpathAndClick(home);
+        driverUtil.xpathAndClick(home);
         Thread.sleep(3000);
         String getLowerSpreadAgent = driverUtil.getTextByXpath(lowerSpreadAgent);
         String a1 = driverUtil.getTextByXpath(ImmediateAgent);
         String getImmediateAgent = a1.substring(0,a1.indexOf("人"));
         System.out.println("下级代理人数："+getLowerSpreadAgent);
         System.out.println("直属推广代理人数："+getImmediateAgent);
-        driverUtil.findElementByXpathAndClick(clickLowerSpreadAgent);
+        driverUtil.xpathAndClick(clickLowerSpreadAgent);
         Thread.sleep(2000);
         String getImmediateAgent2 = driverUtil.getTextByXpath(ImmediateAgent2);
         String b1 = getImmediateAgent2.substring(2,getImmediateAgent2.indexOf(" 条"));
-        driverUtil.findElementByXpathAndClick(reset);
+        driverUtil.xpathAndClick(reset);
         Thread.sleep(2000);
         String b2 = driverUtil.getTextByXpath(lowerSpreadAgent2);
         String getLowerSpreadAgent2 = b2.substring(2,b2.indexOf(" 条"));

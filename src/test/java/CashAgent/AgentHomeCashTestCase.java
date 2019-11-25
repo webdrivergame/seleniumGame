@@ -29,7 +29,7 @@ public class AgentHomeCashTestCase {
     public void loginAdmin() throws InterruptedException {
         driverUtil.loginBefore(Url);
         driverUtil.adminLogin(username,password);
-        driverUtil.findElementByXpathAndClick(login);
+        driverUtil.xpathAndClick(login);
         Thread.sleep(4000);
     }
 
@@ -57,7 +57,7 @@ public class AgentHomeCashTestCase {
     public  void incomeToday() throws InterruptedException {
         String getIncomeToday=driverUtil.getTextByXpath(incomeToday);
         System.out.println("首页今日收入：" + getIncomeToday);
-        driverUtil.findElementByXpathAndClick(clickIncomeToday);
+        driverUtil.xpathAndClick(clickIncomeToday);
         Thread.sleep(2000);
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         Date date = new Date();
@@ -99,16 +99,16 @@ public class AgentHomeCashTestCase {
     @Test(priority = 2)
     public void incomeTotalMonth() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"首页");
-        driverUtil.findElementByXpathAndClick(clickHome);
+        driverUtil.xpathAndClick(clickHome);
         Thread.sleep(3000);
         String getIncomeTotalMonth = driverUtil.getTextByXpath(incomeTotalMonth);
         String a1 = getIncomeTotalMonth.substring(2);
         System.out.println("30日总收入："+a1);
-        driverUtil.findElementByXpathAndClick(clickIncomeToday);
+        driverUtil.xpathAndClick(clickIncomeToday);
         Thread.sleep(2000);
-        driverUtil.findElementByXpathAndClick(clickStartDate);
+        driverUtil.xpathAndClick(clickStartDate);
         Thread.sleep(1000);
-        driverUtil.findElementByXpathAndClick(clickMonth);
+        driverUtil.xpathAndClick(clickMonth);
         Thread.sleep(2000);
         String getMyCommissionIncomeMoths = driverUtil.getTextByXpath(myCommissionIncomeMoths);
         System.out.println("现金代理首页30日我的佣金总账单："+getMyCommissionIncomeMoths);
@@ -137,11 +137,11 @@ public class AgentHomeCashTestCase {
     @Test(priority = 3)
     public void waitSettlementCommission() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"首页");
-        driverUtil.findElementByXpathAndClick(clickHome);
+        driverUtil.xpathAndClick(clickHome);
         Thread.sleep(3000);
         String getWaitSettlementCommission = driverUtil.getTextByXpath(waitSettlementCommission);
         System.out.println("现金代理首页待结算佣金："+getWaitSettlementCommission);
-        driverUtil.findElementByXpathAndClick(clickWaitSettlementCommission);
+        driverUtil.xpathAndClick(clickWaitSettlementCommission);
         Thread.sleep(2000);
         String getAfterChangeBalance = driverUtil.getTextByXpath(afterChangeBalance);
         System.out.println("变动后余额："+getAfterChangeBalance);
@@ -171,13 +171,13 @@ public class AgentHomeCashTestCase {
     @Test(priority = 4)
     public void playerNumberTotal() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"首页");
-        driverUtil.findElementByXpathAndClick(clickHome);
+        driverUtil.xpathAndClick(clickHome);
         Thread.sleep(2000);
         String getPlayerNumberTotal = driverUtil.getTextByXpath(playerNumberTotal);
         System.out.println("首页玩家数量总计："+getPlayerNumberTotal);
-        driverUtil.findElementByXpathAndClick(clickPlayerNumberTotal);
+        driverUtil.xpathAndClick(clickPlayerNumberTotal);
         Thread.sleep(3000);
-        driverUtil.findElementByXpathAndClick(inquire);
+        driverUtil.xpathAndClick(inquire);
         Thread.sleep(3000);
         String getPlayerNumber = driverUtil.getTextByXpath(playerNumber);
         String a1 = getPlayerNumber.substring(2,getPlayerNumber.indexOf(" 条"));//截取数值xx（共 xx 条）

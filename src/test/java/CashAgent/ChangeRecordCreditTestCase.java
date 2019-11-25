@@ -46,7 +46,7 @@ public class ChangeRecordCreditTestCase {
     @Test(priority = 5)
     public void cashAgentCredit() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"额度变动记录");
-        driverUtil.findElementByXpathAndClick(CreditChangeRecord);
+        driverUtil.xpathAndClick(CreditChangeRecord);
         Thread.sleep(2000);
         String getOperatingType = driverUtil.getTextByXpath(operatingType);
         String a1 = driverUtil.getTextByXpath(operatingMoney);
@@ -101,7 +101,7 @@ public class ChangeRecordCreditTestCase {
     @Title("验证充值代理总管额度变动数据")
     @Test(priority = 6)
     public void rechargeAgentAdminCredit() throws InterruptedException {
-        driverUtil.findElementByXpathAndClick(clickRechargeAgentBusiness);
+        driverUtil.xpathAndClick(clickRechargeAgentBusiness);
         Thread.sleep(2000);
         String a2 = driverUtil.getTextByXpath(OperatingMoney2);
         String b2 = driverUtil.getTextByXpath(operatingMoneyBefore2);
@@ -134,7 +134,7 @@ public class ChangeRecordCreditTestCase {
     @Title("验证充值代理额度变动数据")
     @Test(priority = 7)
     public void rechargeAgentCredit() throws InterruptedException {
-        driverUtil.findElementByXpathAndClick(clickRechargeAgent);
+        driverUtil.xpathAndClick(clickRechargeAgent);
         Thread.sleep(2000);
         String getOperatingType3 = driverUtil.getTextByXpath(OperatingType3);
         String a3 = driverUtil.getTextByXpath(OperatingMoney3);

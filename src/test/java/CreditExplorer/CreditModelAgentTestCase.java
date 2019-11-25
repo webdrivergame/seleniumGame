@@ -44,9 +44,9 @@ public class CreditModelAgentTestCase {
     @Test(priority = 1)
     public void EnableOrDisable() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"信用模式代理");
-        driverUtil.findElementByXpathAndClick(creditModelAgent);
+        driverUtil.xpathAndClick(creditModelAgent);
         Thread.sleep(2000);
-        driverUtil.findElementByXpathAndClick(clickAgent);
+        driverUtil.xpathAndClick(clickAgent);
         Thread.sleep(2000);
         String getStatus = driverUtil.getTextByXpath(status);
         String getAccountBalance = driverUtil.getTextByXpath(accountBalance);
@@ -89,11 +89,11 @@ public class CreditModelAgentTestCase {
     @Test(priority = 3)
     public void serviceTotalDesc() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"信用模式代理");
-        driverUtil.findElementByXpathAndClick(creditModelAgent);
+        driverUtil.xpathAndClick(creditModelAgent);
         Thread.sleep(2000);
-        driverUtil.findElementByXpathAndClick(clickAgent);
+        driverUtil.xpathAndClick(clickAgent);
         Thread.sleep(2000);
-        driverUtil.findElementByXpathAndClick(serviceTotalDesc);
+        driverUtil.xpathAndClick(serviceTotalDesc);
         Thread.sleep(2000);
         String getNumberOneMoney = driverUtil.getTextByXpath(numberOneMoney);
         String getNumberTwoMoney = driverUtil.getTextByXpath(numberTwoMoney);
@@ -135,7 +135,7 @@ public class CreditModelAgentTestCase {
     @Title("验证代理服务费总计升序排列")
     @Test(priority = 4)
     public void serviceTotalAsc() throws InterruptedException {
-        driverUtil.findElementByXpathAndClick(serviceTotalAsc);
+        driverUtil.xpathAndClick(serviceTotalAsc);
         Thread.sleep(2000);
         String getNumberOneMoney = driverUtil.getTextByXpath(numberOneMoney);
         String getNumberTwoMoney = driverUtil.getTextByXpath(numberTwoMoney);
@@ -181,7 +181,7 @@ public class CreditModelAgentTestCase {
     @Title("验证代理当前账户余额降序排列")
     @Test(priority = 5)
     public void accountBalanceDesc() throws InterruptedException {
-        driverUtil.findElementByXpathAndClick(accountBalanceDesc);
+        driverUtil.xpathAndClick(accountBalanceDesc);
         Thread.sleep(2000);
         String getNumberOneAccountBalance = driverUtil.getTextByXpath(NumberOneAccountBalance);
         String getNumberTwoAccountBalance = driverUtil.getTextByXpath(NumberTwoAccountBalance);
@@ -223,7 +223,7 @@ public class CreditModelAgentTestCase {
     @Title("验证账户余额升序排列")
     @Test(priority = 6)
     public void setAccountBalanceAsc() throws InterruptedException {
-        driverUtil.findElementByXpathAndClick(setAccountBalanceAsc);
+        driverUtil.xpathAndClick(setAccountBalanceAsc);
         Thread.sleep(2000);
         String getNumberOneAccountBalance = driverUtil.getTextByXpath(NumberOneAccountBalance);
         String getNumberTwoAccountBalance = driverUtil.getTextByXpath(NumberTwoAccountBalance);

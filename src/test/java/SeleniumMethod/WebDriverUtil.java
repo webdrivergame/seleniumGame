@@ -264,13 +264,13 @@ public class WebDriverUtil {
     public void findElementByPartiaTextAndClick(String text) {
         driver.findElement(By.partialLinkText(text)).click();
     }
-    public void findElementByXpathAndClick(String xpath) {
+    public void xpathAndClick(String xpath) {
         driver.findElement(By.xpath(xpath)).click();
     }
     public void findElementByClassNameAndClick(String name) {
         driver.findElement(By.className(name)).click();
     }
-    public void findElementByLinktextAndClick(String text){
+    public void findElementByLinkTextAndClick(String text){
         driver.findElement(By.linkText(text)).click();
     }
     /**

@@ -43,7 +43,7 @@ public class MyCommissionAccountChangeTestCase {
     @Test(priority = 8)
     public void myCommissionAccountChange() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText,"我的佣金账户变动");
-        driverUtil.findElementByXpathAndClick(myCommissionAccount);
+        driverUtil.xpathAndClick(myCommissionAccount);
         Thread.sleep(2000);
         String a1 = driverUtil.getTextByXpath(changeMoney);
         String b1 = driverUtil.getTextByXpath(changeMoneyBefore);

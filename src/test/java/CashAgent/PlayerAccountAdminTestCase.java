@@ -44,11 +44,11 @@ public class PlayerAccountAdminTestCase {
     @Test(priority = 9)
     public void rechargeTotal() throws InterruptedException {
         driverUtil.findElementByXpathAndClearSendkeys(inputText, "玩家账号管理");
-        driverUtil.findElementByXpathAndClick(clickPlayerAccountAdmin);
+        driverUtil.xpathAndClick(clickPlayerAccountAdmin);
         Thread.sleep(2000);
-        driverUtil.findElementByXpathAndClick(Inquire);
+        driverUtil.xpathAndClick(Inquire);
         Thread.sleep(3000);
-        driverUtil.findElementByXpathAndClick(clickRechargeTotalDesc);//总充值降序
+        driverUtil.xpathAndClick(clickRechargeTotalDesc);//总充值降序
         Thread.sleep(2000);
         String getRechargeTotal = driverUtil.getTextByXpath(rechargeTotal);
         BigDecimal RemoveComma = StringToNumber.toBigDecimal(getRechargeTotal);
@@ -80,7 +80,7 @@ public class PlayerAccountAdminTestCase {
     @Title("验证玩家总提现排序功能")
     @Test(priority = 10)
     public void withdrawTotal() throws InterruptedException {
-        driverUtil.findElementByXpathAndClick(withdrawTotalDesc);
+        driverUtil.xpathAndClick(withdrawTotalDesc);
         Thread.sleep(2000);//总提现降序排列
         String getWithdrawTotal1 = driverUtil.getTextByXpath(withdrawTotal1);
         BigDecimal a1 = StringToNumber.toBigDecimal(getWithdrawTotal1);
@@ -113,7 +113,7 @@ public class PlayerAccountAdminTestCase {
     @Title("验证额外补分排序功能")
     @Test(priority = 11)
     public void additionalUpPoints() throws InterruptedException {
-        driverUtil.findElementByXpathAndClick(clickAdditionalPoint);
+        driverUtil.xpathAndClick(clickAdditionalPoint);
         Thread.sleep(2000);//额外补分降序排列
         String getAdditionalUpPoints = driverUtil.getTextByXpath(additionalUpPoints);
         BigDecimal a1 = StringToNumber.toBigDecimal(getAdditionalUpPoints);
